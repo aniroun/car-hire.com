@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: aqua;
+}
+
+.cart-icon img {
+    width: 30px;
+    height: 30px;
+    /* Set the icon color to orange */
+    filter: invert(73%) sepia(100%) saturate(745%) hue-rotate(357deg) brightness(91%);
+}
+
+main {
+    padding: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+
+button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#cart {
+    list-style: none;
+    padding: 0;
+}
+
+#cart li {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+#total {
+    font-size: 20px;
+    font-weight: bold;
+}
+/* Add this CSS code to style.css */
+ul#cart {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Display the list as a flex container */
+    flex-wrap: wrap; /* Enable wrapping for items */
+}
+
+ul#cart li {
+    flex: 1; /* Each list item takes equal space, making them display in a row */
+    margin: 20px; /* Add some margin to separate items */
+    border: 1px solid #ccc; /* Add borders for visual separation */
+    padding: 10px;
+    text-align: center; /* Center the contents of each item */
+}
+
+ul#cart img {
+    max-width: 100px; /* Limit image width to prevent oversized images */
+    margin: 0 auto; /* Center the image horizontally */
+    display: block;
+}
+
+/* Style the Pay button */
+button#payButton {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+button#payButton:hover {
+    background-color: black;
+}
+/* Add this CSS code to your style.css file */
+
+/* Style for the "+" and "-" buttons */
+button.increment, button.decrement {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+    border-radius: 50%; /* Make the buttons circular */
+}
+
+/* Hover effect for the buttons */
+button.increment:hover, button.decrement:hover {
+    background-color: black;
+}

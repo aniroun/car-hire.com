@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+   
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('hire\ 2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+nav {
+    height: 20px; 
+}
+
+
+
+.main {
+    background: linear-gradient(top, rgba(0, 0, 0, 0.05%) 50%, rgba(0, 0, 0, 0.05%) 50%);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+/* Add this CSS code to style.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black; /* Background color for the navigation bar */
+    padding: 10px 20px; /* Adjust padding to your preference */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin-right: 20px; /* Adjust the spacing between menu items */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: orange; /* Text color for menu items */
+    font-size: 20px; /* Adjust font size to your preference */
+}
+
+
+.icon {
+    width: 200px;
+    height: 70px;
+}
+
+.logo {
+    font-size: 35px;
+    color: white;
+}
+
+.menu {
+    flex: 1;
+    text-align: right;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li {
+    margin-left: 100px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+ul li a:hover {
+    color: #ff7200;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle:hover {
+        color: #999;
+    }
+}
+
+
+
+
+
+.content {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.content h1 {
+    font-family: 'times new roman';
+    font-size: 50px;
+    margin-top: 3%;
+}
+
+.content .cn {
+    width: 160px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Existing CSS styles... */
+
+
+/* Existing CSS styles... */
+
+#search {
+    background-color: #f7f7f7;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.search-form label {
+    margin: 10px;
+    font-weight: bold;
+}
+
+.search-form input[type="date"] {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-form input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-form button {
+    background-color: #333;
+    color: orange;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.age-bar {
+    margin-top: 20px;
+}
+
+label {
+    font-size: 18px;
+}
+
+input {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#age-message {
+    font-size: 18px;
+    margin-top: 10px;
+}
+h2.fleet-heading {
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: center;
+    color: orange;
+    box-shadow: 0 4px 8px rgba(199, 65, 31, 0.5);
+    padding: 10px;
+}
+
+ul.fleet-list {
+    list-style: none;
+    text-align: center;
+    margin-top: 50px;
+    flex-direction: column;
+
+}
+ul.fleet-list li {
+    font-size: 18px;
+    color: orange;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(8, 133, 56, 0.5);
+   padding: 20px;
+}
+
+.fleet-list li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    width: 100%; /* Set width to 100% to extend the border */
+    box-sizing:content-box; /* Include padding in the width calculation */
+    text-align: center; /* Center text within each item */
+}
+
+ul.fleet-list li a:hover {
+    color: orange; /* Change text color on hover */
+}
+.top-nav {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+}
+.social-links {
+    text-align: center;
+    margin: 20px;
+}
+
+.social-links a {
+    margin: 0 10px; /* Adjust the spacing between social media icons */
+    text-decoration: none;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 30px; /* Adjust the width to make the icons smaller */
+    height: 30px; /* Adjust the height to maintain the aspect ratio */
+}
+/* Reset default margin and padding */
+body, ul, li, a, img {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: right;
+}
+
+nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.cart-icon img {
+    width: 30px;
+    height: 30px;
+    /* Set the icon color to orange */
+    color: black;
+    filter: invert(73%) sepia(100%) saturate(745%) hue-rotate(357deg) brightness(91%);
+}
+
+main {
+    padding: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.top-nav a {
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.top-nav a:hover {
+    color: black; /* Change the color on hover (e.g., orange) */
+}
+      /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ 

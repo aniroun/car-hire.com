@@ -1,0 +1,67 @@
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.company-info, .mission-vision, .car-info, .self-drive-options, .team {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: orange;
+    text-align: left; /* Align text to the right */
+}
+p {
+    font-size: 23px;
+    color: white;
+    text-align: center; /* Align text to the right */
+    display: block; /* Display text in a block */
+}
+.team {
+    text-align: center;
+}
+
+.team h2 {
+    text-align: center; /* Center align the "Our Team" heading */
+    color: orange;
+    font-size: 36px;
+}
+
+.team-member {
+    margin-top: 20px;
+    text-align: center; /* Align text to the right */
+    color: orange;
+    display: flex;
+    align-items: center;
+}
+
+.team-member img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+footer {
+    background-color: orange;
+    color: white;
+    text-align: right; /* Align text to the right */
+    padding: 40px;
+}

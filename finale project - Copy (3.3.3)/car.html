@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="car.css">
+    <title>Select Cars and Add to Cart</title>
+</head>
+<style>
+    body {
+        background-image: black;
+        background-size: cover; 
+        background-repeat: no-repeat;
+    }
+
+    
+</style>
+<body>
+    <h1>OUR CARS</h1>
+    <div class="car-list">
+        <div class="car">
+            <img src="safari 1.jpeg" alt="Car Image">
+            <h2>Car Model safari</h2>
+            <p>Price: $15,000</p>
+            <button onclick="addToCart('Car Model safari', 25000)">Add to Cart</button>
+        </div>
+        <div class="car">
+            <img src="economy 2.png" alt="Car Image">
+            <h2>Car Model saloon</h2>
+            <p>Price: $25,000</p>
+            <button onclick="addToCart('Car Model saloon', 25000)">Add to Cart</button>
+        </div>
+        <div class="car">
+            <img src="ecomomy 4.png" alt="Car Image">
+            <h2>Car Model economy</h2>
+            <p>Price: $35,000</p>
+            <button onclick="addToCart('Car Model ecomomy', 25000)">Add to Cart</button>
+        </div>
+
+        <div class="car">
+            <img src="double 2.jpeg" alt="Car Image">
+            <h2>doule cabin</h2>
+            <p>Price: $35,000</p>
+            <button onclick="addToCart('Car Model double cabin ', 25000)">Add to Cart</button>
+        </div>
+        <div class="car">
+            <img src="double 4.jpeg" alt="Car Image">
+            <h2>double cabin</h2>
+            <p>Price: $35,000</p>
+            <button onclick="addToCart('Car Model double cabin', 35000)">Add to Cart</button>
+        </div>
+        <div class="car">
+            <img src="mini 1.jpg" alt="Car Image">
+            <h2>mini bus</h2>
+            <p>Price: $55,000</p>
+            <button onclick="addToCart('Car Model mini bus', 55000)">Add to Cart</button>
+        </div>
+        <div class="car">
+            <img src="safari 5.webp" alt="Car Image">
+            <h2>safari car</h2>
+            <p>Price: $75,000</p>
+            <button onclick="addToCart('Car Model safari car', 75000)">Add to Cart</button>
+        </div>
+        <div class="car">
+            <img src="saloon 4.jpeg" alt="Car Image">
+            <h2>saloon</h2>
+            <p>Price: $35,000</p>
+            <button onclick="addToCart('Car Model saloon', 35000)">Add to Cart</button>
+        </div>
+        <div class="car">
+            <img src="saloon 3.jpeg" alt="Car Image">
+            <h2>saloon</h2>
+            <p>Price: $44,000</p>
+            <button onclick="addToCart('Car Model saloon', 44000)">Add to Cart</button>
+        </div>
+        <div class="car">
+            <img src="saloon 2.webp" alt="Car Image">
+            <h2>saloon</h2>
+            <p>Price: $55,000</p>
+            <button onclick="addToCart('Car Model saloon', 55000)">Add to Cart</button>
+        </div>
+    </div>
+    <script>
+        function addToCart(carName, carPrice) {
+            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+            cartItems.push({ name: carName, price: carPrice });
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: orchid;
+    margin: 0;
+    padding: 0;
+}
+
+.reviews-container {
+    width: 60%;
+    margin: 20px auto;
+}
+
+.review {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.review-name {
+    font-weight: bold;
+}
+
+.review-rating {
+    color: orange;
+}
+
+.review-comment {
+    margin-top: 0;
+    font-style: italic;
+}

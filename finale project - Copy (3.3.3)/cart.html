@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add your head content here -->
+</head>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+    <h1>Shopping Cart</h1>
+    <ul id="cart">
+        <!-- Cart items will be added here using JavaScript -->
+    </ul>
+    <h3>Total: $<span id="total">0.00</span></h3>
+    <button id="payButton">Pay</button>
+
+    <script>
+        function updateCartDisplay() {
+            const cart = document.getElementById("cart");
+            const total = document.getElementById("total");
+            const payButton = document.getElementById("payButton");
+
+            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+            // Clear existing items in the cart
+            cart.innerHTML = '';
+
+            // Populate the cart with the stored items
+            let cartTotal = 0;
+            for (let i = 0; i < cartItems.length; i++) {
+                const item = cartItems[i];
+                const listItem = document.createElement("li");
+
+                // Create an image element for each item
+                const itemImage = document.createElement("img");
+                itemImage.src = `car_images/${item.name}.jpg`; // Assuming image files are named after the car name
+                itemImage.alt = `${item.name} Image`;
+
+                // Append the image to the list item
+                listItem.appendChild(itemImage);
+
+                // Add car details to the list item
+                const itemDetails = document.createElement("span");
+                itemDetails.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                listItem.appendChild(itemDetails);
+
+                // Create buttons for actions
+                const deleteButton = document.createElement("button");
+                deleteButton.textContent = "Delete";
+                deleteButton.addEventListener("click", function () {
+                    // Remove the item from the cartItems array
+                    cartItems.splice(i, 1);
+                    // Update local storage and cart display
+                    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                    updateCartDisplay();
+                });
+
+                const incrementButton = document.createElement("button");
+                incrementButton.textContent = "+";
+                incrementButton.addEventListener("click", function () {
+                    // Increment the quantity of the item
+                    cartItems[i].quantity = (cartItems[i].quantity || 1) + 1;
+                    // Update local storage and cart display
+                    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                    updateCartDisplay();
+                });
+
+                const decrementButton = document.createElement("button");
+                decrementButton.textContent = "-";
+                decrementButton.addEventListener("click", function () {
+                    // Decrement the quantity of the item
+                    if (cartItems[i].quantity > 1) {
+                        cartItems[i].quantity--;
+                    } else {
+                        // If quantity is 1 or less, remove the item from the cart
+                        cartItems.splice(i, 1);
+                    }
+                    // Update local storage and cart display
+                    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+                    updateCartDisplay();
+                });
+
+                // Append buttons to the list item
+                listItem.appendChild(deleteButton);
+                listItem.appendChild(decrementButton);
+                listItem.appendChild(incrementButton);
+
+                cart.appendChild(listItem);
+                cartTotal += item.price * (item.quantity || 1); // Calculate total based on quantity
+            }
+
+            // Update the total cost
+            total.textContent = cartTotal.toFixed(2);
+
+            // Enable or disable the "Pay" button based on cart content
+            payButton.disabled = cartItems.length === 0;
+        }
+
+        // Event listener for the "Pay" button
+        const payButton = document.getElementById("payButton");
+        payButton.addEventListener("click", function () {
+            alert("Payment processing..."); // You can implement your payment logic here
+        });
+
+        // Update the cart display on page load
+        updateCartDisplay();
+    </script>
+</body>
+</html>

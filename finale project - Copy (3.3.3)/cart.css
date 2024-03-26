@@ -1,0 +1,110 @@
+/* Add this CSS code to style.css */
+
+/* Cart container */
+.cart-container {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart header */
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* Cart title */
+.cart-title {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Cart items */
+.cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual cart item */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Item image */
+.cart-item img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+}
+
+/* Item name */
+.cart-item .item-name {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Item price */
+.cart-item .item-price {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Quantity controls */
+.cart-item .quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+/* Quantity input */
+.cart-item .quantity-input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 0 5px;
+}
+
+/* Remove item button */
+.cart-item .remove-item {
+    color: #f00;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Cart total */
+.cart-total {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Checkout button */
+.checkout-button {
+    display: block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-button:hover {
+    background-color: #0056b3;
+}

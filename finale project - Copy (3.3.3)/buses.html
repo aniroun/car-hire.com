@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bus.css">
+    <title>BUSES</title>
+</head>
+<style>
+    body {
+        background-image: black;
+        background-size: cover; /* Adjust the background size as needed */
+        background-repeat: no-repeat;
+    }
+
+</style>
+<body>
+    <header>
+        <h1>BUSES</h1>
+    </header>
+    <div class="car">
+        <img src="bus 1.jpeg" alt="Car Image">
+        <h2>SINGLE-DECK</h2>
+        <p>Price: $35,000</p>
+        <button onclick="addToCart('Car Model double cabin ', 25000)">Add to Cart</button>
+    </div>
+    <div class="car">
+        <img src="bus 2.png" alt="Car Image">
+        <h2>TROLEY BUS</h2>
+        <p>Price: $35,000</p>
+        <button onclick="addToCart('Car Model double cabin', 25000)">Add to Cart</button>
+    </div>
+    <div class="car">
+        <img src="bus 3.jpeg" alt="Car Image">
+        <h2>ARTICULATED</h2>
+        <p>Price: $55,000</p>
+        <button onclick="addToCart('Car Model mini bus', 25000)">Add to Cart</button>
+    </div>
+</div>
+<script>
+    function addToCart(carName, carPrice) {
+        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+        cartItems.push({ name: carName, price: carPrice });
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }
+</script>
+</body>
+</html>
